@@ -34,7 +34,7 @@ class Hand(object):
         self.bid = int(string.split()[1])
 
         # convert the strength comparison of each card into an integer
-        self.strength = Card[self.cards[0]] * 15 * 15 * 15 * 15 + Card[self.cards[1]] * 15 * 15 * 15 + Card[self.cards[2]] * 15 * 15 + Card[self.cards[3]] * 15 + Card[self.cards[4]]
+        self.strength = Card[temp_cards[0]] * 15 * 15 * 15 * 15 + Card[temp_cards[1]] * 15 * 15 * 15 + Card[temp_cards[2]] * 15 * 15 + Card[temp_cards[3]] * 15 + Card[temp_cards[4]]
 
         # a dict as {'card': count}
         self.cards = {}
