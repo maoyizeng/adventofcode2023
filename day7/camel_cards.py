@@ -1,3 +1,4 @@
+import sys
 from enum import Enum
 
 # a list for each hand type
@@ -45,8 +46,8 @@ class Hand(object):
             else:
                 self.cards[c] = 1
 
-def main():
-    with open('hands.txt', 'r') as file:
+def main(filename):
+    with open(filename, 'r') as file:
         for line in file:
             temp_hand = Hand(line)
             l = len(temp_hand.cards)
@@ -82,4 +83,7 @@ def main():
     print(result)
 
 if __name__=='__main__':
-    main()
+    if len(sys.argv) != 2:
+        print("Usage: camel_cards.py FILENAME\n")
+        sys.exit(1)
+    main(sys.argv[1])
