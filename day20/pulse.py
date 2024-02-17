@@ -2,6 +2,8 @@ import sys
 from queue import Queue
 from functools import reduce
 
+# use False for LOW pulse and True for HIGH pulse
+
 workflow = Queue()
 modules = {}
 
