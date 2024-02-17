@@ -138,9 +138,9 @@ def main(filename):
     loop_number = int(1000 / loop_iter)
     resultl = loop_number * loopl
     resulth = loop_number * looph
-    for i in range(loop % loop_iter):
-        resultl + loops[i][0]
-        resulth + loops[i][1]
+    for i in range(1000 % loop_iter):
+        resultl = resultl + loops[i][0]
+        resulth = resulth + loops[i][1]
 
     print(resultl * resulth)
 
